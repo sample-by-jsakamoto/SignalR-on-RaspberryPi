@@ -13,7 +13,7 @@ Requirements / 要件
 - Windows OS
 - Visual Studio 2013
 
-> * It may can build other OS/build tools, but I don't have tried it.  
+> (*) It may can build other OS/build tools, but I don't have tried it.  
 > ※ 他のOS/ビルドツールでもビルド可能かと思いますが、自分は試していません。
 
 Steps / 手順
@@ -56,7 +56,7 @@ Example/例
 > scp -r * pi@<IP address of RaspPi>:/home/pi/
 ```
 
-> * Tips - you can ran scp command and ssh command if you installed git for windows. These commands will be on ```C:\Program Files\Gin\bin``` folder.
+> (*) Tips - you can ran scp command and ssh command if you installed git for windows. These commands will be on ```C:\Program Files\Gin\bin``` folder.  
 > ※Tips - git for Windows をインストール済みなら、scp コマンドや ssh コマンドを使えます。それらのコマンドは、```C:\Program Files\Gin\bin``` フォルダにあることでしょう。
 
 Next, at the console of on Raspberry pi, enter follow commands.
