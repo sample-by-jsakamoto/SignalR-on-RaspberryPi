@@ -56,8 +56,8 @@ Example/例
 > scp -r * pi@<IP address of RaspPi>:/home/pi/
 ```
 
-> (*) Tips - you can ran scp command and ssh command if you installed git for windows. These commands will be on ```C:\Program Files\Gin\bin``` folder.  
-> ※Tips - git for Windows をインストール済みなら、scp コマンドや ssh コマンドを使えます。それらのコマンドは、```C:\Program Files\Gin\bin``` フォルダにあることでしょう。
+> (*) Tips - you can ran scp command and ssh command if you installed git for windows. These commands will be on ```C:\Program Files (x86)\Gin\bin``` folder.  
+> ※Tips - git for Windows をインストール済みなら、scp コマンドや ssh コマンドを使えます。それらのコマンドは、```C:\Program Files (x86)\Gin\bin``` フォルダにあることでしょう。
 
 Next, at the console of on Raspberry pi, enter follow commands.
 
@@ -70,4 +70,4 @@ $ sudo mono app2.exe
 
 After that, you can access ```http://<IP address of Raspberry pi>/index.html``` with any modern web browsers.
 
-以上で、任意のモダン Web ブラウザで ```http://<IP address of Raspberry pi>/index.html``` にアクセスすることが可能です。
+以上で、任意のモダン Web ブラウザで ```http://<Raspberry piのIPアドレス>/index.html``` にアクセスすることが可能です。
