@@ -50,7 +50,7 @@ Transfer all out put files to Raspberry pi.
 
 すべての出力ファイルを Raspberry pi に転送します。
 
-Example/例
+**Example/例**
 ```
 > cd app2/bin/debug
 > scp -r * pi@<IP address of RaspPi>:/home/pi/
