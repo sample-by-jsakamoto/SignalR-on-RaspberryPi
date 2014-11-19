@@ -1,24 +1,30 @@
-﻿/// <reference path="c:\projects\test\app2\app2\scripts\jquery-2.1.1.js" />
-/// <reference path="c:\projects\test\app2\app2\scripts\jquery.signalr-2.1.2.js" />
-$(function () {
+﻿/// <reference path="scripts\jquery-2.1.1.js" />
+/// <reference path="scripts\jquery.signalr-2.1.2.js" />
+/// <reference path="scripts\angular.js" />
+
+var app = angular.module('app', []);
+
+app.controller('myController', function ($scope) {
+    $scope.greeting = { text: 'hello' };
+    $scope.state = { sw1: false, led1: false };
 
     var conn = $.hubConnection();
     var hub = conn.createHubProxy("MyHub");
-    hub.on("ReceivedMessage", function (message) {
-        var msgElem = $('<p>');
-        msgElem.text(message);
-        $('#messages').append(msgElem);
+
+    hub.on("StateChange", function (state) {
+        $scope.$apply(function () { $scope.state = state; });
     });
-    conn.start();
 
-
-    alert('loaded.');
-
-
-    $('#btn-send').click(function () {
-        var text = $('#text').val();
-        $('#text').val('');
-        hub.invoke('SendMessage', text);
-
+    conn.start()
+    .then(function () { return hub.invoke('Enter'); })
+    .then(function (state) {
+        $scope.$apply(function () { $scope.state = state; });
     });
+
+    this.turnOn_led1 = function () {
+        hub.invoke('Turn', 'on', 'led1');
+    };
+    this.turnOff_led1 = function () {
+        hub.invoke('Turn', 'off', 'led1');
+    };
 });
