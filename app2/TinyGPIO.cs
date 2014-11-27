@@ -44,7 +44,11 @@ namespace app2
 
         public static TinyGPIO Export(int port)
         {
-            RawWrite(BasePath + "/export", port.ToString());
+            var portPath = GetGPIOPortPath(port);
+            if (!Directory.Exists(portPath))
+            {
+                RawWrite(BasePath + "/export", port.ToString());
+            }
             return new TinyGPIO(port);
         }
 
@@ -64,7 +68,12 @@ namespace app2
 
         private TinyGPIO(int port)
         {
-            this.PortPath = BasePath + "/gpio" + port.ToString();
+            this.PortPath = GetGPIOPortPath(port);
+        }
+
+        private static string GetGPIOPortPath(int port)
+        {
+            return BasePath + "/gpio" + port.ToString();
         }
 
         private void Write(string name, object value)
