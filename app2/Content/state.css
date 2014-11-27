@@ -5,3 +5,53 @@
 .led1-true #led1 {
     color: yellow;
 }
+
+
+svg text {
+    pointer-events: none;
+}
+
+/* ---- Sw 1 ---- */
+svg #sw1On, svg #sw1Off, svg #statSw1On, svg #statSw1Off {
+    -moz-transition: all linear 0.1s;
+    -o-transition: all linear 0.1s;
+    -webkit-transition: all linear 0.1s;
+    transition: all linear 0.1s;
+}
+
+.sw1-false svg #sw1On,
+.sw1-false svg #statSw1On {
+    opacity: 0;
+}
+
+.sw1-true svg #sw1Off,
+.sw1-true svg #statSw1Off {
+    opacity: 0;
+}
+
+
+/* ---- LED 1 ---- */
+
+svg #btnLed1On,
+svg #btnLed1Off {
+    cursor: pointer;
+}
+
+.led1-false svg #btnLed1Off {
+    fill: #54b0f8 !important;
+}
+
+.led1-true svg #btnLed1On {
+    fill: #54b0f8 !important;
+}
+
+svg #led1 {
+    -moz-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+}
+
+.led1-true svg #led1 {
+    fill: yellow !important;
+}

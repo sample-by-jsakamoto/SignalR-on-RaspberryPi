@@ -5,6 +5,17 @@
 var app = angular.module('app', []);
 
 app.controller('myController', function ($scope) {
+    var _this = this;
+
+    $.get('drawing.svg')
+        .then(function (data) {
+            var $svg1 = $(data.documentElement);
+            var $container = $('#container');
+            $container.append($svg1);
+            $svg1[0].getElementById('btnLed1On').addEventListener('click', function () { _this.turnOn_led1(); });
+            $svg1[0].getElementById('btnLed1Off').addEventListener('click', function () { _this.turnOff_led1(); });
+        });
+
     $scope.greeting = { text: 'hello' };
     $scope.state = { sw1: false, led1: false };
 

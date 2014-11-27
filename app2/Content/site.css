@@ -1,0 +1,11 @@
+﻿body {
+    overflow: hidden;
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 150%;
+    border-bottom: solid 4px #ccc;
+    padding-bottom: 0.5em;
+    text-align: center;
+}

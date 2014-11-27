@@ -4,16 +4,16 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link href="Content/site.css" rel="stylesheet" />
     <link href="Content/state.css" rel="stylesheet" />
 </head>
 <body ng-app="app" ng-controller="myController as ctrl">
-    <h1>{{greeting.text}}</h1>
+    <h1>Sensor and Controll on Raspberry Pi by ASP.NET SignalR + mono + OWIN Self Host</h1>
 
-    <div class="container sw1-{{state.sw1}} led1-{{state.led1}}">
-        <p id="sw1">Sw1</p>
-        <p id="led1">Led1</p>
-        <p><a ng-click="ctrl.turnOn_led1()">On</a> / <a ng-click="ctrl.turnOff_led1()">Off</a></p>
+    <div id="container" class="sw1-{{state.sw1}} led1-{{state.led1}}">
+        <!--load SVG here.-->
     </div>
+
     <script src="Scripts/jquery-2.1.1.min.js"></script>
     <script src="Scripts/jquery.signalR-2.1.2.min.js"></script>
     <script src="signalr/hubs"></script>
