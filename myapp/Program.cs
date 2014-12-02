@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using app2;
+using myapp;
 using Microsoft.AspNet.SignalR;
 using Microsoft.Owin.Hosting;
 

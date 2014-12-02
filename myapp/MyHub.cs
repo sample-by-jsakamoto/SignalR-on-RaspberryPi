@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNet.SignalR;
 
-namespace app2
+namespace myapp
 {
     public class MyHub : Hub
     {

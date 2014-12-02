@@ -7,8 +7,8 @@
     <ProjectGuid>{B73DF374-8CC4-4C35-B4CF-9ADF47464F50}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>app2</RootNamespace>
-    <AssemblyName>app2</AssemblyName>
+    <RootNamespace>myapp</RootNamespace>
+    <AssemblyName>myapp</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -72,6 +72,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmbeddedResourceFileSystem2.cs" />
     <Compile Include="GPIOState.cs" />
     <Compile Include="MyHub.cs" />
     <Compile Include="Program.cs" />
@@ -82,53 +83,53 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <Content Include="Content\site.css">
+    <EmbeddedResource Include="Content\site.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="drawing.svg">
+    </EmbeddedResource>
+    <EmbeddedResource Include="drawing.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Scripts\angular.min.js.map">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\angular.min.js.map">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Scripts\jquery-2.1.1.min.map">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\jquery-2.1.1.min.map">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.js">
+    <EmbeddedResource Include="app.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="index.html">
+    </EmbeddedResource>
+    <EmbeddedResource Include="index.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Scripts\angular-mocks.js">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\angular-mocks.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Scripts\angular.js">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\angular.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Scripts\angular.min.js">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\angular.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Scripts\jquery-2.1.1.intellisense.js">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\jquery-2.1.1.intellisense.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Scripts\jquery-2.1.1.js">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\jquery-2.1.1.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Scripts\jquery-2.1.1.min.js">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\jquery-2.1.1.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Scripts\jquery.signalR-2.1.2.js">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\jquery.signalR-2.1.2.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Scripts\jquery.signalR-2.1.2.min.js">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\jquery.signalR-2.1.2.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\state.css">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\state.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
