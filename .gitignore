@@ -4,4 +4,4 @@ bin/
 obj/
 testresults/
 packages/
-app2/sys/
+sys/
