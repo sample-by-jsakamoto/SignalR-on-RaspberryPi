@@ -83,53 +83,23 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <EmbeddedResource Include="Content\site.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="drawing.svg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Scripts\angular.min.js.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Scripts\jquery-2.1.1.min.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Content\site.css" />
+    <EmbeddedResource Include="drawing.svg" />
+    <EmbeddedResource Include="Scripts\angular.min.js.map" />
+    <EmbeddedResource Include="Scripts\jquery-2.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="app.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="index.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Scripts\angular-mocks.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Scripts\angular.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Scripts\angular.min.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Scripts\jquery-2.1.1.intellisense.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Scripts\jquery-2.1.1.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Scripts\jquery-2.1.1.min.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Scripts\jquery.signalR-2.1.2.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Scripts\jquery.signalR-2.1.2.min.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Content\state.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="app.js" />
+    <EmbeddedResource Include="index.html" />
+    <EmbeddedResource Include="Scripts\angular-mocks.js" />
+    <EmbeddedResource Include="Scripts\angular.js" />
+    <EmbeddedResource Include="Scripts\angular.min.js" />
+    <EmbeddedResource Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <EmbeddedResource Include="Scripts\jquery-2.1.1.js" />
+    <EmbeddedResource Include="Scripts\jquery-2.1.1.min.js" />
+    <EmbeddedResource Include="Scripts\jquery.signalR-2.1.2.js" />
+    <EmbeddedResource Include="Scripts\jquery.signalR-2.1.2.min.js" />
+    <EmbeddedResource Include="Content\state.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
