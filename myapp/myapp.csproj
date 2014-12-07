@@ -87,6 +87,21 @@
     <EmbeddedResource Include="drawing.svg" />
     <EmbeddedResource Include="Scripts\angular.min.js.map" />
     <EmbeddedResource Include="Scripts\jquery-2.1.1.min.map" />
+    <None Include="sys\class\gpio\export">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sys\class\gpio\gpio24\direction">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sys\class\gpio\gpio24\value">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sys\class\gpio\gpio25\direction">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sys\class\gpio\gpio25\value">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="app.js" />

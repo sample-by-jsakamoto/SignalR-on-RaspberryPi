@@ -22,7 +22,7 @@ namespace myapp
         {
             if (Environment.OSVersion.Platform == PlatformID.Win32NT)
             {
-                var debugDevPath = ConfigurationManager.AppSettings["debugDevPath"];
+                var debugDevPath = AppDomain.CurrentDomain.BaseDirectory;
                 path = path.TrimStart('/').Replace('/', '\\');
                 return Path.Combine(debugDevPath, path);
             }
