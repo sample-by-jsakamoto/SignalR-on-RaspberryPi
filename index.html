@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Signalr-on-raspberrypi by sample-by-jsakamoto</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Signalr-on-raspberrypi</h1>
+        <p>Sample code of ASP.NET SignalR OWIN Self Hosting console app which can run on Raspberry Pi!</p>
+
+        <p class="view"><a href="https://github.com/sample-by-jsakamoto/SignalR-on-RaspberryPi">View the Project on GitHub <small>sample-by-jsakamoto/SignalR-on-RaspberryPi</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/sample-by-jsakamoto/SignalR-on-RaspberryPi/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/sample-by-jsakamoto/SignalR-on-RaspberryPi/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/sample-by-jsakamoto/SignalR-on-RaspberryPi">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="whats-this--これは何か" class="anchor" href="#whats-this--%E3%81%93%E3%82%8C%E3%81%AF%E4%BD%95%E3%81%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>What's this? / これは何か?</h1>
+
+<p>This is  the sample code of ASP.NET SignalR OWIN Self Hosting console app which can run on Raspberry Pi.</p>
+
+<p>これは、Raspberry Pi 上でも実行可能な、OWIN セルフホスティングによる ASP.NET SignalR コンソールアプリのサンプルコードです。</p>
+
+<h2>
+<a id="demonstration-video--デモ動画" class="anchor" href="#demonstration-video--%E3%83%87%E3%83%A2%E5%8B%95%E7%94%BB" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demonstration Video / デモ動画</h2>
+
+<p><a href="http://youtu.be/NHVvPBlqMmE"><img src="images/video-thumbnail.png" alt="figure01"> </a></p>
+
+<h2>
+<a id="quick-start--試してみよう" class="anchor" href="#quick-start--%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quick Start / 試してみよう</h2>
+
+<ol>
+<li>Get a "Raspberry Pi" (and if you prefer, get a Wireless Network USB adapter)<br>
+"Raspberry Pi"を購入します (お好みで、無線LANのUSBドングルも購入します)<br>
+<img src="images/figure1.png" alt="figure1"> </li>
+<li>Install OS "Raspbian" and configure internet connection.<br>
+OS "Raspbian" をインストールし、インターネット接続を構成します。</li>
+<li>Wire up the logic taht is follow diagram on the solderless breadboard<br>
+下図の回路をブレッドボード上に配線します。<br>
+<img src="images/figure2.png" alt="figure2"><br>
+(Download "<a href="http://fritzing.org/media/fritzing-repo/projects/s/signalr-on-rasppi-sample-board/fritzing/SignalR-on-RaspPi.fzz">SignalR-on-RaspPi.fzz</a>")</li>
+<li>Enter following commands on shell of the Raspberry Pi.<br>
+下記のコマンドを Raspberry Pi のシェルに入力します。<br>
+</li>
+</ol>
+
+<pre><code>$ sudo apt-get update  
+$ sudo apt-get upgrade  
+$ sudo apt-get install mono-complete
+$ wget...
+</code></pre>
+
+<ol>
+<li>Open the URL "http://<em>{IP Address of Raspberry Pi}</em>" by any modern web browsers on the PC that you prefer, or any modern SmartPhones.<br>
+お好みのPC上の近代的Webブラウザ、または近代的なスマートフォーンで、URL  "http://<em>{Raspberry Pi の IP アドレス}</em>"を開きます。</li>
+</ol>
+
+<h1>
+<a id="how-to-build--ビルド方法" class="anchor" href="#how-to-build--%E3%83%93%E3%83%AB%E3%83%89%E6%96%B9%E6%B3%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to build? / ビルド方法</h1>
+
+<h2>
+<a id="requirements--要件" class="anchor" href="#requirements--%E8%A6%81%E4%BB%B6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements / 要件</h2>
+
+<ul>
+<li>Windows OS</li>
+<li>Visual Studio 2013</li>
+</ul>
+
+<blockquote>
+<p>(*) It may can build other OS/build tools, also only command line tools, but I don't have tried it.<br>
+※ 他のOS/ビルドツール、コマンドラインツールのみでもビルド可能かと思いますが、自分は試していません。</p>
+</blockquote>
+
+<h2>
+<a id="steps--手順" class="anchor" href="#steps--%E6%89%8B%E9%A0%86" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steps / 手順</h2>
+
+<p>Enter follow commands in command prompt.</p>
+
+<p>コマンドプロンプトで、以下のコマンドを実行します。</p>
+
+<pre><code>&gt; git clone git@github.com:sample-by-jsakamoto/SignalR-on-RaspberryPi.git
+&gt; cd SignalR-on-RaspberryPi
+&gt; start SignalR-on-RaspPi.sln
+</code></pre>
+
+<p>Then Visual Studio is lauched, type <code>Ctrl + Shift + B</code> key.<br>
+After that, you get out put files at myapp/bin/debug folder.</p>
+
+<p>Visual Studio が起動するので、<code>Ctrl + Shift + B</code> キーを押します。<br>
+そうすると、myapp/bin/debug フォルダに出力ファイルが得られます。</p>
+
+<h1>
+<a id="how-to-deploy-to-raspberry-pi--raspberry-pi-への配置方法" class="anchor" href="#how-to-deploy-to-raspberry-pi--raspberry-pi-%E3%81%B8%E3%81%AE%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to deploy to Raspberry pi? / Raspberry pi への配置方法</h1>
+
+<h2>
+<a id="steps--手順-1" class="anchor" href="#steps--%E6%89%8B%E9%A0%86-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steps / 手順</h2>
+
+<p>Transfer all out put files to Raspberry pi.</p>
+
+<p>すべての出力ファイルを Raspberry pi に転送します。</p>
+
+<p><strong>Example/例</strong></p>
+
+<pre><code>&gt; cd myapp/bin/debug
+&gt; scp -r * pi@&lt;IP address of RaspPi&gt;:/home/pi/
+</code></pre>
+
+<blockquote>
+<p>(*) Tips - you can ran scp command and ssh command if you installed git for windows. These commands will be on <code>C:\Program Files (x86)\Gin\bin</code> folder.<br>
+※Tips - git for Windows をインストール済みなら、scp コマンドや ssh コマンドを使えます。それらのコマンドは、<code>C:\Program Files (x86)\Gin\bin</code> フォルダにあることでしょう。</p>
+</blockquote>
+
+<p>Next, at the console of on Raspberry pi, enter follow commands.</p>
+
+<p>次に、Raspberry pi のコンソール上で、以下のコマンドを入力します。</p>
+
+<pre><code>$ cd /home/pi
+$ sudo mono myapp.exe
+</code></pre>
+
+<p>After that, you can access <code>http://&lt;IP address of Raspberry pi&gt;/</code> with any modern web browsers.</p>
+
+<p>以上で、任意のモダン Web ブラウザで <code>http://&lt;Raspberry piのIPアドレス&gt;/index.html</code> にアクセスすることが可能です。</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/sample-by-jsakamoto">sample-by-jsakamoto</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
