@@ -16,13 +16,18 @@ namespace myapp
 
     public class TinyGPIO
     {
+        public class Debug
+        {
+            public static string DebugPath { get { return AppDomain.CurrentDomain.BaseDirectory; } }
+        }
+
         private static string BasePath { get { return "/sys/class/gpio"; } }
 
         private static string ConvertPath(string path)
         {
             if (Environment.OSVersion.Platform == PlatformID.Win32NT)
             {
-                var debugDevPath = AppDomain.CurrentDomain.BaseDirectory;
+                var debugDevPath = Debug.DebugPath;
                 path = path.TrimStart('/').Replace('/', '\\');
                 return Path.Combine(debugDevPath, path);
             }

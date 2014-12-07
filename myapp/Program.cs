@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using myapp;
 using Microsoft.AspNet.SignalR;
 using Microsoft.Owin.Hosting;
+using myapp;
 
 class Program
 {
@@ -23,7 +21,8 @@ class Program
         Halt = false;
 
         var baseAddress = "http://*:80/";
-        if (Environment.OSVersion.Platform == PlatformID.Win32NT) baseAddress = "http://localhost:8081/";
+        var isWin = Environment.OSVersion.Platform == PlatformID.Win32NT;
+        if (isWin) baseAddress = "http://localhost:8081/";
         var httpHost = WebApp.Start<Startup>(url: baseAddress);
 
         var hubContext = GlobalHost.ConnectionManager.GetHubContext<MyHub>();
@@ -31,23 +30,29 @@ class Program
         var watcher = new Thread(Watcher);
         watcher.Start();
 
+        var urlOfThisApp = baseAddress.Replace("*", "127.0.0.1");
 
         Console.WriteLine();
         for (; ; )
         {
-            Console.WriteLine("Toggle [S]w1 / Toggle [L]ed1 / [Q]uit");
+            Console.WriteLine("URL: " + urlOfThisApp);
+            Console.WriteLine("[O]pen browser / [Q]uit" + (isWin ? " / Toggle [S]w1" : ""));
             var key = Console.ReadKey(intercept: true).KeyChar.ToString().ToUpper();
             Console.WriteLine(key);
             Console.WriteLine();
             switch (key)
             {
-                case "S":
-                    CurrentState.sw1 = !CurrentState.sw1;
-                    hubContext.Clients.All.StateChange(CurrentState);
+                case "O":
+                    Process.Start(urlOfThisApp);
                     break;
-                case "L":
-                    CurrentState.led1 = !CurrentState.led1;
-                    hubContext.Clients.All.StateChange(CurrentState);
+                case "S":
+                    if (isWin)
+                    {
+                        var gpio24valuePath = Path.Combine(TinyGPIO.Debug.DebugPath, @"sys\class\gpio\gpio24\value");
+                        var gpio24value = File.ReadAllLines(gpio24valuePath).First();
+                        gpio24value = gpio24value == "0" ? "1" : "0";
+                        File.WriteAllLines(gpio24valuePath, new[] { gpio24value });
+                    }
                     break;
                 case "Q":
                     Console.WriteLine("Stoping...");
