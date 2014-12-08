@@ -26,9 +26,15 @@ OS "Raspbian" をインストールし、インターネット接続を構成し
 $ sudo apt-get update  
 $ sudo apt-get upgrade  
 $ sudo apt-get install mono-complete
-$ wget...
+$ cd ~
+$ mkdir myapp
+$ cd myapp
+$ curl -L http://j.mp/1yvqM1o > myapp.zip
+$ unzip myapp.zip
+$ sudo mono myapp.exe
 ```
-5. Open the URL "http://*{IP Address of Raspberry Pi}*" by any modern web browsers on the PC that you prefer, or any modern SmartPhones.  
+
+At last, open the URL "http://*{IP Address of Raspberry Pi}*" by any modern web browsers on the PC that you prefer, or any modern SmartPhones.  
 お好みのPC上の近代的Webブラウザ、または近代的なスマートフォーンで、URL  "http://*{Raspberry Pi の IP アドレス}*"を開きます。
 
 How to build? / ビルド方法
